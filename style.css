@@ -1,6 +1,6 @@
 :root {
     --Blue: hsl(246, 80%, 60%);
-    --Light-red: hsl(15, 100%, 70%);
+    --Brown: hsl(15, 100%, 70%);
     --Soft-blue: hsl(195, 74%, 62%);
     --Light-red: hsl(348, 100%, 68%);
     --Lime-green: hsl(145, 58%, 55%) ;
@@ -21,18 +21,36 @@
     font-size: 18px;
 }
 
-body {
-    background-color: var(--Very-dark-blue);
+html {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+body {
+    background-color: var(--Very-dark-blue);
     color: var(--White);
+}
+
+main {
+    position: relative;
+    top: 8.5rem;
+}
+
+main, .top-row, .bottom-row {
+    display: flex;
+}
+
+.reports {
+    display: flex;
+    flex-direction: column;
 }
 
 .report-card {
     background-color: var(--Dark-blue);
     border-radius: 20px;
-    width: 300px;
+    width: 320px;
+    margin-right: 2rem;
 }
 
 .report-card .top {
@@ -71,6 +89,91 @@ body {
     color: var(--Desaturated-blue);
 }
 
+.report-card .bottom .disabled:hover {
+    color: var(--White);
+    cursor: pointer;
+}
+
 .report-card .bottom p {
     margin-bottom: 1rem;
+}
+
+.card {
+    width: 320px;
+    height: 320px;
+    border-radius: 20px;
+    margin-right: 2rem;
+}
+
+.work {
+    height: 90px;
+    background-color: var(--Dark-blue);
+}
+
+.card-img {
+    background-color: var(--Brown);
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-img img {
+    position: relative;
+    left: 12rem;
+}
+
+.card .content {
+    position: relative;
+    bottom: 2rem;
+    z-index: 2;
+    background-color: var(--Dark-blue);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.card .content:hover {
+    background-color: hsl(235, 29%, 55%);
+}
+
+.content .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.content .header h4 {
+    font-weight: 400;
+}
+
+.info h1.hrs {
+    font-size: 4rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+}
+
+.info p.last-week {
+    color: var(--Pale-Blue);
+}
+
+.play .card-img {
+    background-color: var(--Soft-blue);
+}
+
+.study .card-img {
+    background-color: var(--Light-red);
+}
+
+.exercise .card-img {
+    height: 100px;
+    background-color: var(--Lime-green);
+}
+
+.social .card-img {
+    background-color: var(--Violet);
+}
+
+.self-care .card-img {
+    height: 100px;
+    background-color: var(--Soft-orange);
 }
