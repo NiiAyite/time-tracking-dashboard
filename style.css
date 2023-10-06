@@ -81,6 +81,10 @@ main, .top-row, .bottom-row {
     margin-bottom: 1rem;
 }
 
+.top .info h1.mobile {
+    display: none;
+}
+
 .report-card .bottom {
     padding: 3rem;
 }
@@ -176,4 +180,94 @@ main, .top-row, .bottom-row {
 .self-care .card-img {
     height: 100px;
     background-color: var(--Soft-orange);
+}
+
+
+@media screen and (max-width: 375px) {
+
+    html {
+        display: block;
+    }
+
+    main {
+        top: 3rem;
+        left: 1.5rem;
+    }
+
+    main, .top-row, .bottom-row {
+        flex-direction: column;
+    }
+
+    .report-card {
+        margin-bottom: 2rem;
+    }
+
+    .report-card .top {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2rem 1rem 0 1rem;
+    }
+
+    .report-card .top h1 {
+        font-size: 2rem;
+        display: none;
+    }
+
+    .report-card .top h1.mobile {
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    .profile img {
+        width: 50px;
+    }
+
+    .report-card .bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 1rem .5rem 1rem;
+    }
+
+    .card {
+        height: 100px;
+        margin-bottom: 6rem;
+    }
+
+    .card .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: .5rem;
+    }
+
+    .content .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .info h1.hrs {
+        font-size: 1.5rem;
+        font-weight: 200;
+        margin-bottom: 0;
+    }
+
+    .info p.last-week {
+        color: var(--Pale-Blue);
+        font-size: .5rem;
+    }
+
+    .social {
+        margin-top: 1rem;
+    }
+
+    .self-care {
+        margin-top: 1rem;
+        margin-bottom: 10rem;
+    }
 }
